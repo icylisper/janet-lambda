@@ -1,0 +1,13 @@
+# Target
+dst
+!*/**/dst
+janet
+!*/**/janet
+/build
+/builddir
+/Build
+/Release
+/Debug
+/Emscripten
+janet-*.tar.gz
+dist
