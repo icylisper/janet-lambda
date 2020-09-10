@@ -6,8 +6,6 @@ Usage
 Use the `lambda` library to define a handler
 --------------------------------------------
 
-See example/ for how to use the lambda library
-
 `main.janet`
 
 ``` {.janet}
@@ -38,7 +36,8 @@ See example/ for how to use the lambda library
 
 ```
 
-Make sure that the executable is named `bootstrap`
+Make sure that the executable is named `bootstrap`. Also see example/
+for how to use the lambda library
 
 Building the Executable on AmazonLinux
 --------------------------------------
