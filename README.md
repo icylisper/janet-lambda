@@ -3,8 +3,8 @@ A library and container help run Janet programs in AWS Lambda
 Usage
 =====
 
-Use the `lambda` library to define a handler
---------------------------------------------
+1. Use the `lambda` library to define a handler
+-----------------------------------------------
 
 `main.janet`
 
@@ -39,7 +39,7 @@ Use the `lambda` library to define a handler
 Make sure that the executable is named `bootstrap`. Also see example/
 for how to use the lambda library
 
-Building the Executable on AmazonLinux
+2. Build the Executable on AmazonLinux
 --------------------------------------
 
 `janet-lambda-builder` Docker image is a wrapper around AmazonLinux 2 -
@@ -60,7 +60,7 @@ docker run --rm \
 The above generates an executable called `bootstrap` in the current
 directory.
 
-Deploying the Lambda
+3. Deploy the Lambda
 --------------------
 
 ``` {.bash}
