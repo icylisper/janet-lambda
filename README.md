@@ -3,8 +3,8 @@ A library to help run Janet programs or scripts in AWS Lambda
 Usage
 =====
 
-Use the `lambda` library to define a
-------------------------------------
+Use the `lambda` library to define a handler
+--------------------------------------------
 
 See example/ for how to use the lambda library
 
@@ -27,24 +27,26 @@ See example/ for how to use the lambda library
 
 ``` {.janet}
 (declare-project
- :name "server"
+ :name "bootstrap"
  :description "My Lambda Function"
  :dependencies ["https://git.sr.ht/~icylisper/janet-lambda-runtime"])
 
 (declare-executable
- :name "server"
+ :name "bootstrap"
  :source ["main.janet"]
  :entry "main.janet")
 
 ```
 
+Make sure that the executable is named `bootstrap`
+
 Building the Executable on AmazonLinux
 --------------------------------------
 
-We build the dynamically-linked executable on a AmazonLinux base docker
-image. `janet-lambda-builder` image installs the specified Janet version
-and compiles the code in the current directly inside the Docker
-container.
+`janet-lambda-builder` Docker image is a wrapper around AmazonLinux 2 -
+it installs the specified Janet version and generates a
+dynamically-linked executable that can run as a Lambda with no missing
+dependencies.
 
 ``` {.bash}
 
@@ -73,7 +75,7 @@ aws lambda create-function
     --zip-file fileb://lambda.zip
 ```
 
-To test
+And finally
 
 ``` {.bash}
 aws lambda invoke \
