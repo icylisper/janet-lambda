@@ -1,4 +1,4 @@
-A library to help run Janet programs or scripts in AWS Lambda
+A library and container help run Janet programs in AWS Lambda
 
 Usage
 =====
