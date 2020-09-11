@@ -6,7 +6,7 @@ Usage
 Use the `lambda` library to define a handler
 --------------------------------------------
 
-`main.janet`
+**main.janet**
 
 ``` {.janet}
 (import lambda)
@@ -21,7 +21,7 @@ Use the `lambda` library to define a handler
 
 ```
 
-`project.janet`
+**project.janet**
 
 ``` {.janet}
 (declare-project
@@ -39,10 +39,10 @@ Use the `lambda` library to define a handler
 Make sure that the executable is named `bootstrap`. Also see example/
 for how to use the lambda library
 
-Build the executable on AmazonLinux Docker
-------------------------------------------
+Generate the executable on AmazonLinux Docker
+---------------------------------------------
 
-`janet-lambda-builder` Docker image is a wrapper around AmazonLinux 2 -
+`janet-lambda-builder` docker image is a wrapper around AmazonLinux 2 -
 it installs the specified Janet version and generates a
 dynamically-linked executable that can run as a Lambda with no missing
 dependencies.
@@ -60,8 +60,8 @@ docker run --rm \
 The above generates an executable called `bootstrap` in the current
 directory.
 
-Deploy the Lambda
------------------
+Deploy the Lambda artifact
+--------------------------
 
 ``` {.bash}
 zip -9r lambda.zip bootstrap
