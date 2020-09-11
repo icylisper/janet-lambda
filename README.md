@@ -6,7 +6,7 @@ Usage
 Define handler using `lambda` library
 -------------------------------------
 
-**main.janet**
+`main.janet`
 
 ``` {.janet}
 (import lambda)
@@ -21,7 +21,7 @@ Define handler using `lambda` library
 
 ```
 
-**project.janet**
+`project.janet`
 
 ``` {.janet}
 (declare-project
