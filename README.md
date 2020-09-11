@@ -53,7 +53,7 @@ docker run --rm \
    -e JANET_PATH=/build/janet -e JANET_VERSION=v1.12.1 \
    --volume $(shell pwd)/:/build --workdir /build \
    --network host \
-   icylisper/janet-lambda-builder
+   icylisper/janet-lambda-builder:0.1.1
 
 ```
 
